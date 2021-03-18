@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
-import {allBeers} from './../services/beer-api';
+import {loadSingleBeer} from './../services/beer-api';
 
 class BeerDetails extends Component {
     state = {
@@ -28,6 +28,7 @@ class BeerDetails extends Component {
 
     render() {
         const single = this.state.single;
+        console.log(this.state.single);
         return (
             <div>
                 <header>
@@ -35,7 +36,13 @@ class BeerDetails extends Component {
                 </header>
                 {this.state.single && (
                     <>
+                    <img src={single.image_url} alt=""/>
                     <h1>{single.name}</h1>
+                    <h3>{single.tagline}</h3>
+                    <p>{single.first_brewed}</p>
+                    <p>{single.attenuation_level}</p>
+                    <p>{single.description}</p>
+                    <p>{single.contributed_by}</p>
                     </>
                 )}
                 

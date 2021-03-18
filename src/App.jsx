@@ -16,7 +16,7 @@ function App() {
       <Route path="/beers" component={AllBeers} exact/>
       <Route path="/random-beer" component={RandomBeer} exact/>
       <Route path="/new-beer" component={NewBeer} exact/>
-      <Route path="/beers/:beerId" component={BeerDetails} exact/>
+      <Route path="/beers/:id" component={BeerDetails} exact/>
       </BrowserRouter>
     </div>
   );
